@@ -1,1 +1,1 @@
-import "./node_modules/markdown-air/css/air.css"
+import "./node_modules/simpledotcss/simple.min.css"
