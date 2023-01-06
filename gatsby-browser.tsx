@@ -34,14 +34,13 @@ export function wrapPageElement({ element }) {
           position: "fixed",
           height: "3rem",
           width: "3rem",
-          borderRadius: "2rem",
+          borderRadius: "1.5rem",
           backgroundColor: quizmode ? "#7986CB" : "#3D5AFE",
           bottom: "1.5rem",
           right: "1.5rem",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          filter: "drop-shadow(0,0,5rem)"
         }}
         onClick={() => setQuizmode(!quizmode)}
       >
@@ -50,7 +49,7 @@ export function wrapPageElement({ element }) {
             verticalAlign: "bottom",
           }}
         >
-          {quizmode ? "" : "Q"}
+          {quizmode ? "×" : "Q"}
         </span>
       </div>
       <MDXProvider
