@@ -1,3 +1,3 @@
-# using-typescript
+# めもの保管庫
 
-Demonstrates using TypeScript to build Gatsby sites. Read the [Gatsby and TypeScript documentation](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/) to learn more.
+[![Deploy Gatsby site to Pages](https://github.com/gw31415/mdblank/actions/workflows/gatsby.yml/badge.svg)](https://github.com/gw31415/mdblank/actions/workflows/gatsby.yml)
