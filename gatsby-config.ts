@@ -6,7 +6,17 @@ const config: GatsbyConfig = {
   },
   plugins: [
     `gatsby-plugin-pnpm`,
-    `gatsby-plugin-mdx`,
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        mdxOptions: {
+          remarkPlugins: [require("remark-join-cjk-lines")],
+          rehypePlugins: [],
+        },
+        extensions: [".md", ".mdx"],
+        gatsbyRemarkPlugins: [],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
