@@ -7,6 +7,7 @@ const config: GatsbyConfig = {
   pathPrefix: `/mdblank`, // for GitHub Pages
   plugins: [
     `gatsby-plugin-pnpm`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {

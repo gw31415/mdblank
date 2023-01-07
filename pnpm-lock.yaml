@@ -6,6 +6,7 @@ specifiers:
   '@types/react': ^17.0.39
   '@types/react-dom': ^17.0.11
   gatsby: next
+  gatsby-plugin-catch-links: ^5.3.0
   gatsby-plugin-mdx: ^5.3.1
   gatsby-plugin-pnpm: ^1.2.10
   gatsby-source-filesystem: ^5.3.1
@@ -19,6 +20,7 @@ specifiers:
 dependencies:
   '@mdx-js/react': 2.2.1_react@18.2.0
   gatsby: 5.5.0-next.0_o4scbtliisanygemawej7x2d6i
+  gatsby-plugin-catch-links: 5.3.0_gatsby@5.5.0-next.0
   gatsby-plugin-mdx: 5.3.1_54fcgzlf3vw32ucjodywbfqtzi
   gatsby-plugin-pnpm: 1.2.10_gatsby@5.5.0-next.0
   gatsby-source-filesystem: 5.3.1_gatsby@5.5.0-next.0
@@ -5761,6 +5763,17 @@ packages:
       '@parcel/runtime-js': 2.8.2_@parcel+core@2.8.2
       '@parcel/transformer-js': 2.8.2_@parcel+core@2.8.2
       '@parcel/transformer-json': 2.8.2_@parcel+core@2.8.2
+    dev: false
+
+  /gatsby-plugin-catch-links/5.3.0_gatsby@5.5.0-next.0:
+    resolution: {integrity: sha512-/ErNP1T1mJIkpZEgjO9mf3j6YieQWH19xmVmuXIB40Jg5pz23RERi0Sr/TdgQcWUTtY3sHF4W8xdghhd5O94ZQ==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      gatsby: ^5.0.0-next
+    dependencies:
+      '@babel/runtime': 7.20.7
+      escape-string-regexp: 1.0.5
+      gatsby: 5.5.0-next.0_o4scbtliisanygemawej7x2d6i
     dev: false
 
   /gatsby-plugin-mdx/5.3.1_54fcgzlf3vw32ucjodywbfqtzi:
