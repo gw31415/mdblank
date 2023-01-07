@@ -36,6 +36,7 @@ export function wrapPageElement({ element }) {
           width: "3rem",
           borderRadius: "1.5rem",
           backgroundColor: quizmode ? "#7986CB" : "#3D5AFE",
+          color: "#dcdcdc",
           bottom: "1.5rem",
           right: "1.5rem",
           display: "flex",
@@ -44,23 +45,17 @@ export function wrapPageElement({ element }) {
         }}
         onClick={() => setQuizmode(!quizmode)}
       >
-        <span
-          style={{
-            verticalAlign: "bottom",
-          }}
-        >
-          {quizmode ? "×" : "Q"}
-        </span>
+        {quizmode ? "×" : "Q"}
       </div>
       <MDXProvider
         components={
           quizmode
             ? {
-                strong: BlankStrong,
-                blockquote: props => (
-                  <blockquote {...props} style={{ visibility: "hidden" }} />
-                ),
-              }
+              strong: BlankStrong,
+              blockquote: props => (
+                <blockquote {...props} style={{ visibility: "hidden" }} />
+              ),
+            }
             : {}
         }
       >
