@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react"
 import { MDXProvider } from "@mdx-js/react"
+import type { Components as MDXComponents } from "@mdx-js/react/lib"
+// import { Header } from "./src/components/header"
+
 import "./node_modules/simpledotcss/simple.min.css"
 
 function BlankStrong(
@@ -23,6 +26,14 @@ function BlankStrong(
     setColor(style.color)
   }, [])
   return main
+}
+
+const baseComponents: MDXComponents = {
+  h1: props => <h2 {...props} />,
+  h2: props => <h3 {...props} />,
+  h3: props => <h4 {...props} />,
+  h4: props => <h5 {...props} />,
+  h5: props => <h6 {...props} />,
 }
 
 export function wrapPageElement({ element }) {
@@ -53,12 +64,13 @@ export function wrapPageElement({ element }) {
           components={
             quizmode
               ? {
-                strong: BlankStrong,
-                blockquote: props => (
-                  <blockquote {...props} style={{ visibility: "hidden" }} />
-                ),
-              }
-              : {}
+                  strong: BlankStrong,
+                  blockquote: props => (
+                    <blockquote {...props} style={{ visibility: "hidden" }} />
+                  ),
+                  ...baseComponents,
+                }
+              : baseComponents
           }
         >
           {element}
