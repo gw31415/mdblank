@@ -4,7 +4,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     siteName: `めもの保管庫`,
   },
-  pathPrefix: `/mdblank`,
+  pathPrefix: `/mdblank`, // for GitHub Pages
   plugins: [
     `gatsby-plugin-pnpm`,
     {
