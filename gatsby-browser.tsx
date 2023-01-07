@@ -40,6 +40,23 @@ export function wrapPageElement({ element }) {
   const [quizmode, setQuizmode] = useState(false)
   return (
     <>
+      <main>
+        <MDXProvider
+          components={
+            quizmode
+              ? {
+                  strong: BlankStrong,
+                  blockquote: props => (
+                    <blockquote {...props} style={{ visibility: "hidden" }} />
+                  ),
+                  ...baseComponents,
+                }
+              : baseComponents
+          }
+        >
+          {element}
+        </MDXProvider>
+      </main>
       <div
         style={{
           position: "fixed",
@@ -59,23 +76,6 @@ export function wrapPageElement({ element }) {
       >
         {quizmode ? "×" : "Q"}
       </div>
-      <main>
-        <MDXProvider
-          components={
-            quizmode
-              ? {
-                  strong: BlankStrong,
-                  blockquote: props => (
-                    <blockquote {...props} style={{ visibility: "hidden" }} />
-                  ),
-                  ...baseComponents,
-                }
-              : baseComponents
-          }
-        >
-          {element}
-        </MDXProvider>
-      </main>
     </>
   )
 }
