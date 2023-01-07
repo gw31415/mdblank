@@ -29,11 +29,11 @@ function BlankStrong(
 }
 
 const baseComponents: MDXComponents = {
-  h1: props => <h2 {...props} />,
-  h2: props => <h3 {...props} />,
-  h3: props => <h4 {...props} />,
-  h4: props => <h5 {...props} />,
-  h5: props => <h6 {...props} />,
+  // h1: props => <h2 {...props} />,
+  // h2: props => <h3 {...props} />,
+  // h3: props => <h4 {...props} />,
+  // h4: props => <h5 {...props} />,
+  // h5: props => <h6 {...props} />,
 }
 
 export function wrapPageElement({ element }) {
