@@ -11,7 +11,15 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-mdx",
       options: {
         mdxOptions: {
-          remarkPlugins: [require("remark-join-cjk-lines")],
+          remarkPlugins: [
+            require("remark-join-cjk-lines"),
+            [
+              require("remark-wiki-link"),
+              {
+                hrefTemplate: (permalink: string) => `../${encodeURIComponent(permalink)}`,
+              },
+            ],
+          ],
           rehypePlugins: [],
         },
         extensions: [".md", ".mdx"],
