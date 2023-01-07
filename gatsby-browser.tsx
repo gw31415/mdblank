@@ -42,25 +42,28 @@ export function wrapPageElement({ element }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          filter: "drop-shadow(.5ex .5ex 10px rgba(0,0,0,50%))",
         }}
         onClick={() => setQuizmode(!quizmode)}
       >
         {quizmode ? "×" : "Q"}
       </div>
-      <MDXProvider
-        components={
-          quizmode
-            ? {
-              strong: BlankStrong,
-              blockquote: props => (
-                <blockquote {...props} style={{ visibility: "hidden" }} />
-              ),
-            }
-            : {}
-        }
-      >
-        {element}
-      </MDXProvider>
+      <main>
+        <MDXProvider
+          components={
+            quizmode
+              ? {
+                strong: BlankStrong,
+                blockquote: props => (
+                  <blockquote {...props} style={{ visibility: "hidden" }} />
+                ),
+              }
+              : {}
+          }
+        >
+          {element}
+        </MDXProvider>
+      </main>
     </>
   )
 }
