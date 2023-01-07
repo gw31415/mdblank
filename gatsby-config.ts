@@ -16,7 +16,8 @@ const config: GatsbyConfig = {
             [
               require("remark-wiki-link"),
               {
-                hrefTemplate: (permalink: string) => `../${encodeURIComponent(permalink)}`,
+                hrefTemplate: (permalink: string) =>
+                  `../${encodeURIComponent(permalink)}`,
               },
             ],
           ],
