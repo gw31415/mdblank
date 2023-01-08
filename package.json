@@ -1,8 +1,8 @@
 {
-  "name": "using-typescript",
+  "name": "mdblank",
   "version": "1.0.0",
-  "description": "Gatsby example site demonstrating how to use TypeScript with Gatsby",
-  "author": "fabien0102 <fabien0102@gmail.com>",
+  "description": "個人的めもの保管庫",
+  "author": "Amadeus_vn <git@amas.dev>",
   "license": "MIT",
   "scripts": {
     "start": "gatsby develop",
