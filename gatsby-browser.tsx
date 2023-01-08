@@ -71,6 +71,8 @@ export function wrapPageElement({ element }) {
           justifyContent: "center",
           alignItems: "center",
           filter: "drop-shadow(.5ex .5ex 10px rgba(0,0,0,50%))",
+          userSelect: "none",
+          cursor: "pointer",
         }}
         onClick={() => setQuizmode(!quizmode)}
       >
