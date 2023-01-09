@@ -14,6 +14,7 @@ const config: GatsbyConfig = {
         mdxOptions: {
           remarkPlugins: [
             require("remark-join-cjk-lines"),
+            require("remark-gfm"),
             [
               require("remark-wiki-link"),
               {
