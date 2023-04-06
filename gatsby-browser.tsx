@@ -4,6 +4,7 @@ import type { Components as MDXComponents } from "@mdx-js/react/lib"
 // import { Header } from "./src/components/header"
 
 import "./node_modules/simpledotcss/simple.min.css"
+import { StaticImage } from "gatsby-plugin-image"
 
 function BlankStrong(
   props: React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>

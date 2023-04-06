@@ -8,6 +8,8 @@ const config: GatsbyConfig = {
   plugins: [
     `gatsby-plugin-pnpm`,
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -35,6 +37,12 @@ const config: GatsbyConfig = {
             },
           },
           `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
         ],
       },
     },
