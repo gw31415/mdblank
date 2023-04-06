@@ -26,7 +26,16 @@ const config: GatsbyConfig = {
           rehypePlugins: [],
         },
         extensions: [".md", ".mdx"],
-        gatsbyRemarkPlugins: [],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-table-of-contents-patch`,
+            options: {
+              tight: true,
+              toHeading: 3,
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+        ],
       },
     },
     {
