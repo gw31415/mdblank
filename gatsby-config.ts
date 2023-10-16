@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -22,6 +22,8 @@ const config: GatsbyConfig = {
               {
                 hrefTemplate: (permalink: string) =>
                   `../${encodeURIComponent(permalink)}`,
+                pageResolver: (pageName: string) => [pageName],
+                aliasDivider: "|",
               },
             ],
           ],
@@ -54,6 +56,6 @@ const config: GatsbyConfig = {
       },
     },
   ],
-}
+};
 
-export default config
+export default config;
