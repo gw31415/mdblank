@@ -4,17 +4,26 @@ import { defaultLayout } from "astro-default-layout";
 import rehypeMathjax from "rehype-mathjax";
 import remarkMath from "remark-math";
 import sitemap from "@astrojs/sitemap";
+import rehypeBudouxParagraph from "rehype-budoux-paragraph";
 
 // https://astro.build/config
-export default defineConfig(({
+export default defineConfig({
   markdown: {
-    remarkPlugins: [defaultLayout, [remarkWikiLink, {
-      hrefTemplate: (permalink: string) => `../${encodeURIComponent(permalink)}/`,
-      pageResolver: (pageName: string) => [pageName],
-      aliasDivider: "|"
-    }], remarkMath],
-    rehypePlugins: [rehypeMathjax],
-    extendDefaultPlugins: true
+    remarkPlugins: [
+      defaultLayout,
+      [
+        remarkWikiLink,
+        {
+          hrefTemplate: (permalink: string) =>
+            `../${encodeURIComponent(permalink)}/`,
+          pageResolver: (pageName: string) => [pageName],
+          aliasDivider: "|",
+        },
+      ],
+      remarkMath,
+    ],
+    rehypePlugins: [rehypeMathjax, rehypeBudouxParagraph],
   },
-  trailingSlash: "always"
-} as any));
+  trailingSlash: "always",
+  integrations: [sitemap()],
+});

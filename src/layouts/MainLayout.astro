@@ -5,7 +5,6 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8" />
@@ -24,15 +23,11 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<style>
+			:global(p) {
+				text-align: justify;
+			}
+		</style>
 		<slot />
 	</body>
 </html>
-<script>
-	import { HTMLProcessor, loadDefaultJapaneseParser } from "budoux";
-	const elems = document.querySelectorAll("p")!;
-	const htmlProcessor = new HTMLProcessor(loadDefaultJapaneseParser());
-	for (const elem of elems) {
-		htmlProcessor.applyToElement(elem);
-		elem.style.textAlign = "justify";
-	}
-</script>
