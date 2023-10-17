@@ -27,3 +27,12 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+<script>
+	import { HTMLProcessor, loadDefaultJapaneseParser } from "budoux";
+	const elems = document.querySelectorAll("p")!;
+	const htmlProcessor = new HTMLProcessor(loadDefaultJapaneseParser());
+	for (const elem of elems) {
+		htmlProcessor.applyToElement(elem);
+		elem.style.textAlign = "justify";
+	}
+</script>
