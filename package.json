@@ -1,39 +1,25 @@
 {
   "name": "mdblank",
-  "version": "1.0.0",
-  "description": "個人的めもの保管庫",
-  "author": "Amadeus_vn <git@amas.dev>",
-  "license": "MIT",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "start": "gatsby develop",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "type-check": "tsc --noEmit"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@mdx-js/react": "^2.2.1",
-    "gatsby": "5.12.5",
-    "gatsby-plugin-catch-links": "^5.3.0",
-    "gatsby-plugin-image": "^3.8.0",
-    "gatsby-plugin-mdx": "^5.3.1",
-    "gatsby-plugin-pnpm": "^1.2.10",
-    "gatsby-plugin-sharp": "^5.8.1",
-    "gatsby-remark-autolink-headers": "^6.8.0",
-    "gatsby-remark-images": "^7.8.0",
-    "gatsby-remark-table-of-contents-patch": "^2.0.0",
-    "gatsby-source-filesystem": "^5.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "remark-gfm": "^1",
-    "remark-join-cjk-lines": "^1.0.9",
-    "remark-wiki-link": "^1.0.4",
-    "simpledotcss": "^2.1.1"
+    "@astrojs/sitemap": "^3.0.1",
+    "astro": "^3.3.1",
+    "astro-default-layout": "^2.0.2",
+    "rehype-mathjax": "^5.0.0",
+    "remark-math": "^6.0.0",
+    "remark-wiki-link": "^2.0.1"
   },
   "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
-    "remark": "^14.0.3",
-    "typescript": "^4.5.5"
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "typescript": "^5.2.2"
   }
 }

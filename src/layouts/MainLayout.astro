@@ -1,0 +1,29 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,shrink-to-fit=no"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/simpledotcss@2.2.1/simple.min.css"
+			integrity="sha256-/Utme3wDNP8grTDde+CI/KC1HhcynvqIk4Ql6UtRS6o="
+			crossorigin="anonymous"
+		/>
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
