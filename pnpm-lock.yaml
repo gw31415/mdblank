@@ -14,9 +14,6 @@ devDependencies:
   astro-default-layout:
     specifier: ^2.0.2
     version: 2.0.2
-  budoux:
-    specifier: ^0.5.2
-    version: 0.5.2
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
