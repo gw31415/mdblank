@@ -5,6 +5,7 @@ import rehypeMathjax from "rehype-mathjax";
 import remarkMath from "remark-math";
 import sitemap from "@astrojs/sitemap";
 import rehypeBudouxParagraph from "rehype-budoux-paragraph";
+import Compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,5 +26,5 @@ export default defineConfig({
     rehypePlugins: [rehypeMathjax, rehypeBudouxParagraph],
   },
   trailingSlash: "always",
-  integrations: [sitemap()],
+  integrations: [sitemap(), Compress({ Image: false })],
 });
