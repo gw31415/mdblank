@@ -32,6 +32,9 @@ devDependencies:
   remark-math:
     specifier: ^6.0.0
     version: 6.0.0
+  remark-toc:
+    specifier: ^9.0.0
+    version: 9.0.0
   remark-wiki-link:
     specifier: ^2.0.1
     version: 2.0.1
@@ -926,6 +929,10 @@ packages:
     resolution: {integrity: sha512-9jWta97bBVC027/MShr3gLab8gPhKy4l6qpb+UJLF5pDm3501NvA7uvqVCW+REFtx00oTi6Cq9JzLwgq6evVgw==}
     dependencies:
       '@types/node': 17.0.45
+    dev: true
+
+  /@types/ungap__structured-clone@0.3.0:
+    resolution: {integrity: sha512-eBWREUhVUGPze+bUW22AgUr05k8u+vETzuYdLYSvWqGTUe0KOf+zVnOB1qER5wMcw8V6D9Ar4DfJmVvD1yu0kQ==}
     dev: true
 
   /@types/unist@2.0.8:
@@ -2717,6 +2724,18 @@ packages:
       '@types/mdast': 4.0.1
     dev: true
 
+  /mdast-util-toc@7.0.0:
+    resolution: {integrity: sha512-C28UcSqjmnWuvgT8d97qpaItHKvySqVPAECUzqQ51xuMyNFFJwcFoKW77KoMjtXrclTidLQFDzLUmTmrshRweA==}
+    dependencies:
+      '@types/mdast': 4.0.1
+      '@types/ungap__structured-clone': 0.3.0
+      '@ungap/structured-clone': 1.2.0
+      github-slugger: 2.0.0
+      mdast-util-to-string: 4.0.0
+      unist-util-is: 6.0.0
+      unist-util-visit: 5.0.0
+    dev: true
+
   /mdast-util-wiki-link@0.1.2:
     resolution: {integrity: sha512-DTcDyOxKDo3pB3fc0zQlD8myfQjYkW4hazUKI9PUyhtoj9JBeHC2eIdlVXmaT22bZkFAVU2d47B6y2jVKGoUQg==}
     dependencies:
@@ -3765,6 +3784,13 @@ packages:
       retext: 8.1.0
       retext-smartypants: 5.2.0
       unist-util-visit: 4.1.2
+    dev: true
+
+  /remark-toc@9.0.0:
+    resolution: {integrity: sha512-KJ9txbo33GjDAV1baHFze7ij4G8c7SGYoY8Kzsm2gzFpbhL/bSoVpMMzGa3vrNDSWASNd/3ppAqL7cP2zD6JIA==}
+    dependencies:
+      '@types/mdast': 4.0.1
+      mdast-util-toc: 7.0.0
     dev: true
 
   /remark-wiki-link@2.0.1:

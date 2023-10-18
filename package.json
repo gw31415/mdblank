@@ -19,6 +19,7 @@
     "rehype-budoux-paragraph": "^1.0.0",
     "rehype-mathjax": "^5.0.0",
     "remark-math": "^6.0.0",
+    "remark-toc": "^9.0.0",
     "remark-wiki-link": "^2.0.1",
     "sharp": "^0.32.6",
     "typescript": "^5.2.2"
