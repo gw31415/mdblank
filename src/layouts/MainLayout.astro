@@ -27,12 +27,76 @@ const { title } = Astro.props;
 		<title>{`mdblank個人メモ${title !== "" ? " | " + title : ""}`}</title>
 	</head>
 	<body>
-		<style>
-			:global(p) {
-				text-align: justify;
-				text-indent: 0.8em;
-			}
-		</style>
-		<slot />
+		<main>
+			<style>
+				:global(p) {
+					text-align: justify;
+					text-indent: 0.8em;
+				}
+			</style>
+			<slot />
+		</main>
+		<div
+			id="quizbutton"
+			style={{
+				position: "fixed",
+				height: "3rem",
+				width: "3rem",
+				borderRadius: "1.5rem",
+				backgroundColor: "#3D5AFE",
+				color: "#dcdcdc",
+				bottom: "1.5rem",
+				right: "1.5rem",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				filter: "drop-shadow(.5ex .5ex 10px rgba(0,0,0,50%))",
+				userSelect: "none",
+				cursor: "pointer",
+			}}
+		>
+			Q
+		</div>
 	</body>
+	<script>
+		// キーワード
+		const keywords: NodeListOf<HTMLElement> =
+			document.querySelectorAll("p strong");
+		// 隠れたテキストをクリックして剥がす
+		keywords.forEach((element) =>
+			element.addEventListener("click", () => {
+				const style = window.getComputedStyle(element);
+				if (style.backgroundColor === style.color) {
+					element.style.backgroundColor = "";
+				}
+			}),
+		);
+		const mainButton = document.getElementById(
+			"quizbutton",
+		) as HTMLDivElement;
+		mainButton.addEventListener("click", () => {
+			if (mainButton.innerText.includes("Q")) {
+				// Enable QuizMode
+				mainButton.innerText = "×";
+				mainButton.style.backgroundColor = "#7986CB";
+				keywords.forEach((element) => {
+					const style = window.getComputedStyle(element);
+					element.style.backgroundColor = style.color;
+				});
+				for (const bq of document.getElementsByTagName("blockquote")) {
+					bq.style.visibility = "hidden";
+				}
+			} else {
+				// Disable QuizMode
+				mainButton.innerText = "Q";
+				mainButton.style.backgroundColor = "#3D5AFE";
+				keywords.forEach((element) => {
+					element.style.backgroundColor = "";
+				});
+				for (const bq of document.getElementsByTagName("blockquote")) {
+					bq.style.visibility = "";
+				}
+			}
+		});
+	</script>
 </html>
