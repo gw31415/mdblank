@@ -39,7 +39,7 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 		<div
-			id="quizbutton"
+			id="cNsR"
 			style={{
 				position: "fixed",
 				height: "3rem",
@@ -57,48 +57,10 @@ const { title } = Astro.props;
 				cursor: "pointer",
 			}}
 		>
-			Q
 		</div>
 	</body>
 	<script>
-		// キーワード
-		const keywords: NodeListOf<HTMLElement> =
-			document.querySelectorAll("p strong");
-		// 隠れたテキストをクリックして剥がす
-		keywords.forEach((element) =>
-			element.addEventListener("click", () => {
-				const style = window.getComputedStyle(element);
-				if (style.backgroundColor === style.color) {
-					element.style.backgroundColor = "";
-				}
-			}),
-		);
-		const mainButton = document.getElementById(
-			"quizbutton",
-		) as HTMLDivElement;
-		mainButton.addEventListener("click", () => {
-			if (mainButton.innerText.includes("Q")) {
-				// Enable QuizMode
-				mainButton.innerText = "×";
-				mainButton.style.backgroundColor = "#7986CB";
-				keywords.forEach((element) => {
-					const style = window.getComputedStyle(element);
-					element.style.backgroundColor = style.color;
-				});
-				for (const bq of document.getElementsByTagName("blockquote")) {
-					bq.style.visibility = "hidden";
-				}
-			} else {
-				// Disable QuizMode
-				mainButton.innerText = "Q";
-				mainButton.style.backgroundColor = "#3D5AFE";
-				keywords.forEach((element) => {
-					element.style.backgroundColor = "";
-				});
-				for (const bq of document.getElementsByTagName("blockquote")) {
-					bq.style.visibility = "";
-				}
-			}
-		});
+		import setup from "./quiz.ts";
+		setup(document.getElementById("cNsR"));
 	</script>
 </html>
