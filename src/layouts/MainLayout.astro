@@ -24,7 +24,7 @@ const { title } = Astro.props;
 			integrity="sha256-/Utme3wDNP8grTDde+CI/KC1HhcynvqIk4Ql6UtRS6o="
 			crossorigin="anonymous"
 		/>
-		<title>{title}</title>
+		<title>{`mdblank個人メモ${title !== "" ? " | " + title : ""}`}</title>
 	</head>
 	<body>
 		<style>
