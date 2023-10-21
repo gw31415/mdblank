@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  simpledotcss:
+    specifier: ^2.2.1
+    version: 2.2.1
+
 devDependencies:
   '@astrojs/sitemap':
     specifier: ^3.0.1
@@ -3991,6 +3996,10 @@ packages:
     dependencies:
       is-arrayish: 0.3.2
     dev: true
+
+  /simpledotcss@2.2.1:
+    resolution: {integrity: sha512-bEuU6rLmL8Lu6gBcn6HlslEEoHk4v8ldW3K4DOCT33e4L0Y3ExMT9DuITQ7KhRBKlKFDJ3DgAwxoGrN+0B9Jiw==}
+    dev: false
 
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}

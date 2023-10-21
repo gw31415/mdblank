@@ -26,5 +26,8 @@
   },
   "trustedDependencies": [
     "sharp"
-  ]
+  ],
+  "dependencies": {
+    "simpledotcss": "^2.2.1"
+  }
 }
