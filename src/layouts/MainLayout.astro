@@ -13,10 +13,24 @@ const { title } = Astro.props;
 			content="width=device-width,initial-scale=1,shrink-to-fit=no"
 		/>
 		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" href={import.meta.env.BASE_URL + "favicon.ico"} sizes="any" />
-		<link rel="icon" href={import.meta.env.BASE_URL + "favicon.svg"} type="image/svg+xml" />
-		<link rel="apple-touch-icon" href={import.meta.env.BASE_URL + "apple-touch-icon.png"} />
-		<link rel="manifest" href={import.meta.env.BASE_URL + "manifest.webmanifest"} />
+		<link
+			rel="icon"
+			href={import.meta.env.BASE_URL + "favicon.ico"}
+			sizes="any"
+		/>
+		<link
+			rel="icon"
+			href={import.meta.env.BASE_URL + "favicon.svg"}
+			type="image/svg+xml"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href={import.meta.env.BASE_URL + "apple-touch-icon.png"}
+		/>
+		<link
+			rel="manifest"
+			href={import.meta.env.BASE_URL + "manifest.webmanifest"}
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/simpledotcss@2.2.1/simple.min.css"
@@ -33,6 +47,9 @@ const { title } = Astro.props;
 				:global(p) {
 					text-align: justify;
 					text-indent: 0.8em;
+				}
+				:global(img) {
+					display: block;
 				}
 			</style>
 			<slot />
