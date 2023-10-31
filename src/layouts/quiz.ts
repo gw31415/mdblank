@@ -4,9 +4,7 @@
  */
 export default function setup(button: HTMLElement) {
 	// キーワード
-	const keywords: NodeListOf<HTMLElement> = document.querySelectorAll(
-		"p strong",
-	);
+	const keywords: NodeListOf<HTMLElement> = document.querySelectorAll("strong");
 	button.innerText = "Q";
 	// 隠れたテキストをクリックして剥がす
 	keywords.forEach((element) =>
